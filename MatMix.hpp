@@ -13,6 +13,7 @@ To Do:
        iv)  Gauss Jacobi
        v)   Crout's Algo
        vi)  Dolittle's algo 
+       vii) Choleski Algo
 5. This class should have following member function to solve for Eigen Values 
 i.   Power Method
 ii.  Shift Inverse Power Method
@@ -93,6 +94,7 @@ public:
     MatMix luDecomposition() const;
     MatMix gaussSeidel(const vector<double>& b, int iterations, double tol) const;
     MatMix gaussJacobi(const vector<double>& b, int iterations, double tol) const;
+    MatMix choleskiMethod();
 
     /*Functions-Methods for Eigen Values: 
     powerMethod() const; 
