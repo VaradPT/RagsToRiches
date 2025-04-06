@@ -37,7 +37,6 @@ Rules:  No hard coding, memory to be allocated dynamically, code to be written i
 #include <vector>
 
 using namespace std;
-/*
 class MatMix {
 private: 
     int rows, cols;
@@ -47,6 +46,7 @@ private:
     void deallocateMemory();
      
 public: 
+/*
     MatMix(int rows, int cols);
     MatMix(const MatMix& other);
     ~MatMix();
