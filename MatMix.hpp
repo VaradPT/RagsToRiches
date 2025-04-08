@@ -4,13 +4,18 @@ To Do:
 1. Class should implement Constructors and Destructor
 2. Class should read input from a file and also be able to write Output to File or console
 3.   This class should handle all arithmetic operations on Matrices using Operators:
-      i)  Insertion, Extraction operators
-      ii) Addition Subtraction and Multiplication of Matrices 
+      i)  Insertion, Extraction operators [entering and storing values to variables]
+      ii) Addition Subtraction and Multiplication of Matrices [overloading the + - * operators with matrix operations]
 4. This Class should have following member functions to solve system of linear equations. 
-       i)   Gaussian Elimination
-       ii)  LU Decomposition
+       i)   Gaussian Elimination 
+       [1.1 Augmented Matrix 1.2 Make Upper trilar]
+      
+      ii)  LU Decomposition 
        iii) Gauss Siedel 
+       [1. Check if diagonally Dominant 2. If not make diagonally dominant 3. Express variables in terms of their counterparts 4.Sub the zeroes 5. Then go to the iterations(immediate substitution) ]
        iv)  Gauss Jacobi
+       [1. Check if diagonally Dominant 2. If not make diagonally dominant 3. Express variables in terms of their counterparts 4.Sub the zeroes 5. Then go to the iterations(step by step substitution) ]
+
        v)   Crout's Algo
        vi)  Dolittle's algo 
        vii) Choleski Algo
