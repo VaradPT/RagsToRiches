@@ -51,17 +51,17 @@ private:
     void deallocateMemory();
      
 public: 
-/*
-    MatMix(int rows, int cols);
-    MatMix(const MatMix& other);
-    ~MatMix();
 
-    void readFromFile(const string& filename);
+    MatMix(int rows, int cols); //constructor
+    MatMix(const MatMix& other);
+    ~MatMix();//destructor
+
+    void readFromFile(const string& filename); //file handling
     void writeToFile(const string& filename) const;
 
     void print() const;
 
-    friend ostream& operator<<(ostream& os, const MatMix& mat);
+    friend ostream& operator<<(ostream& os, const MatMix& mat); //copy constructor
     friend istream& operator>>(istream& is, MatMix& mat);
 
     
