@@ -16,5 +16,6 @@ This should serve like my own journey log.. Starting 18/03/2025 in poor academic
 * 12/4/25: 20% Blueprint ready, JS Project and cpp class lagging- Use extra time on 13th and 14th 
   > Next deadline 15/04/2025 : JS all APIs designed and working, (you be) ready for deployment, 
   > CPP Matrix class working (work continuously on complex, root and chebyshev concepts, coz in 20% time you have to do 220% just to catch up; meaning one task a       time, no room for parallels. STRICTLY.
+* Break taken on Emergency grounds 13/04/2025. Revival resumes.
 
   
