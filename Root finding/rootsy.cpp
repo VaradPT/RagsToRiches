@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "rootsy.hpp"
 using namespace std;
 /*
 //Bisection
