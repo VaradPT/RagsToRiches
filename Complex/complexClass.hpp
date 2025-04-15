@@ -1,5 +1,5 @@
 #ifndef complexClass
-
+#define complexClass
 class complexClass
 {
     private:
