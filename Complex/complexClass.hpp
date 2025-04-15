@@ -1,6 +1,12 @@
 #ifndef complexClass
+
+class complexClass
+{
+    private:
+    public:
+}
 /*
-standards: Insertion, extractions, file handling etc .. Norm and complex conjugate finding
+Same standards: Insertion, extractions, file handling etc .. Norm and complex conjugate finding
 */
 
 #endif
