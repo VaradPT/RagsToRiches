@@ -4,8 +4,8 @@
 using namespace std;
 /*
 //Bisection
-double f(double x) {
-    return x*x*x - x - 2;
+double f(double x) { //Declaring the mathematical function 
+    return x*x*x - x - 2; // Aiming to accept the function from user.. will be interesting
 }
 
 void bisection(double a, double b, double tol = 1e-6) {
