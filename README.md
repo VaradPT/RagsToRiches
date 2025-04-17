@@ -17,5 +17,6 @@ This should serve like my own journey log.. Starting 18/03/2025 in poor academic
   > Next deadline 15/04/2025 : JS all APIs designed and working, (you be) ready for deployment, 
   > CPP Matrix class working (work continuously on complex, root and chebyshev concepts, coz in 20% time you have to do 220% just to catch up; meaning one task a       time, no room for parallels. STRICTLY.
 * Break taken on Emergency grounds 13/04/2025. Revival resumes.
-
+* Slight progress made, CPP and Mathematics undertaken, but still way behind 17/04/2025
+  > Using 18/04/2025 as a recovery day
   
