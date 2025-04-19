@@ -6,6 +6,7 @@ using namespace std;
 //Bisection
 double f(double x) { //Declaring the mathematical function 
     return x*x*x - x - 2; // Aiming to accept the function from user.. will be interesting
+    //A. Accept coefficients in one array, powers in another, corelate, calculate
 }
 
 void bisection(double a, double b, double tol = 1e-6) {
