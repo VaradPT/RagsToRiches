@@ -37,7 +37,7 @@ public:
     Matmix choleskyDecomposition();
 
     // Matrix Properties
-    bool isDiagonallyDominant() const;
+    bool isDiagonallyDominant() const; //to check if sum of row& column < elemnent i,i
     void makeDiagonallyDominant();
     bool isSymmetric() const;
 
