@@ -24,7 +24,7 @@ public:
     void readFromFile(const string& filename);
     void writeToFile(const string& filename) const;
 
-    // Arithmetic Operations
+    // Arithmetic Operations : Overloaded
     Matmix operator+(const Matmix& other);
     Matmix operator-(const Matmix& other);
     Matmix operator*(const Matmix& other);
