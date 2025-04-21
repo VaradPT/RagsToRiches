@@ -1,9 +1,9 @@
 // MatMix.cpp
-#include "MatMix.hpp"
-#include <cmath>
-#include <stdexcept>
-#include <iomanip>
-#include <algorithm>
+#include "MatMix.hpp" //including the header file
+#include <cmath> //includes the mathematical operations
+#include <stdexcept> //standard exception header file
+#include <iomanip> // formatting of ouput 
+#include <algorithm> 
 
 
 // Default Constructor
