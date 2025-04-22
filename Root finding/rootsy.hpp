@@ -2,17 +2,17 @@
 #include <iostream>
 using namespace std;
 
-//Newton Raphson
+//Newton Raphson Method
 /* Method under standing and program under construction :) */
 void NewtonRaphson();
-//Bisection
+//Bisection Method
 /*Given interval for a point... function, accepting the equation from user and giving useful results,  */
 void bisectionMethod();
-//Fixed point
+//Fixed point Method
 void fixedPoint();
-//Least Square
+//Least Square Method
 void leastSquare();
-//Lagranges polynomial
+//Lagranges polynomial Method
 void lagrangesPoly();
 
 #endif 
