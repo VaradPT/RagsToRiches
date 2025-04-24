@@ -10,7 +10,7 @@ double accept(double x)
     std::cout<<"A. Quadratic / degree 2 ";
     std::cout<<"B. Cubic / degree 3";
     std::cout<<"C. Other";
-    return px; 
+     
     // Aiming to accept the function from user.. will be interesting
     //A. Accept coefficients in one array, powers in another, corelate, calculate .. for any polynomial
     //B. Accept coefficients .. usual way
