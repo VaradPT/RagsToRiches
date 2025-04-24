@@ -4,7 +4,7 @@ using std namespace;
 
 int main()
 {
-  //Accept the Polynomial
+  //Accept the Polynomial ..
   // Display the polynomial
   //Give the resutlts
 }
