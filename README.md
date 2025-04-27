@@ -20,4 +20,4 @@ This should serve like my own journey log.. Starting 18/03/2025 in poor academic
 * Slight progress made, CPP and Mathematics undertaken, but still way behind 17/04/2025
   > Using 18/04/2025 as a recovery day
 * Recovery 2.0
-  > 27/04/2025: Nix the jinx. 7 Leetcode probs daily. One NC class daily. Two Stats Concepts Daily.  
+  > 27/04/2025: Nix the jinx. 7 Leetcode probs daily. One NC class daily. Two Stats Concepts Daily. CSS-HTML-ReactNative for fun. Done? Haskell and Cpp probs. Bored? OS Concept
