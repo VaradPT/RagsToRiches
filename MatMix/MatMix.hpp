@@ -6,13 +6,13 @@
 #include <fstream>
 using namespace std;
 
-class Matmix {
-private:
+class Matmix 
+{
+public:
     int rows, cols;
     double** data; // Dynamic 2D array
-
-public:
-    // Constructors & Destructor
+    string filename;
+// Constructors & Destructor
     Matmix();                           // Default constructor
     Matmix(int r, int c);               // Null constructor
     Matmix(const Matmix& other);        // Copy constructor
@@ -24,7 +24,7 @@ public:
     void readFromFile(const string& filename);
     void writeToFile(const string& filename) const;
 
-    // Arithmetic Operations : Overloaded
+    // Arithmetic Operations
     Matmix operator+(const Matmix& other);
     Matmix operator-(const Matmix& other);
     Matmix operator*(const Matmix& other);
@@ -35,18 +35,23 @@ public:
     Matmix gaussSeidel(int maxIter = 1000, double tol = 1e-10);
     Matmix gaussJacobi(int maxIter = 1000, double tol = 1e-10);
     Matmix choleskyDecomposition();
+    //Matmix dooittleMethod();
 
     // Matrix Properties
-    bool isDiagonallyDominant() const; //to check if sum of row& column < elemnent i,i
+    bool isDiagonallyDominant() const;
     void makeDiagonallyDominant();
     bool isSymmetric() const;
 
+
     // Utility
+    //Utility operations: Trace(Sum of Diagonals)
+    //Eigen Values and further operations
+
     int getRows() const;
     int getCols() const;
     double getValue(int r, int c) const;
     void setValue(int r, int c, double val);
-    bool areAllFilesEqual() const;
+    /*Under construction*/bool areAllFilesEqual(numofiles, filenames) const;
 };
 
 #endif
