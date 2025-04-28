@@ -1,25 +1,29 @@
 // MatMix.cpp
-#include "MatMix.hpp" //including the header file
-#include <cmath> //includes the mathematical operations
-#include <stdexcept> //standard exception header file
-#include <iomanip> // formatting of ouput 
-#include <algorithm> 
-
+#include "MatMix.hpp"
+#include <cmath>
+#include <stdexcept>
+#include <iomanip>
+#include <algorithm>
+#include <vector>
+#include <string>
 
 // Default Constructor
 Matmix::Matmix() : rows(0), cols(0), data(nullptr) {}
 
 // Null Constructor (rows × cols, initialized to 0)
-Matmix::Matmix(int r, int c) : rows(r), cols(c) {
+Matmix::Matmix(int r, int c) : rows(r), cols(c) 
+{
     data = new double*[rows];
     for (int i = 0; i < rows; ++i)
         data[i] = new double[cols]();
 }
 
 // Copy Constructor
-Matmix::Matmix(const Matmix& other) : rows(other.rows), cols(other.cols) {
+Matmix::Matmix(const Matmix& other) : rows(other.rows), cols(other.cols) 
+{
     data = new double*[rows];
-    for (int i = 0; i < rows; ++i) {
+    for (int i = 0; i < rows; ++i) 
+    {
         data[i] = new double[cols];
         for (int j = 0; j < cols; ++j)
             data[i][j] = other.data[i][j];
@@ -27,14 +31,16 @@ Matmix::Matmix(const Matmix& other) : rows(other.rows), cols(other.cols) {
 }
 
 // Destructor
-Matmix::~Matmix() {
+Matmix::~Matmix() 
+{
     for (int i = 0; i < rows; ++i)
         delete[] data[i];
     delete[] data;
 }
 
 // Input operator >>
-istream& operator>>(istream& in, Matmix& m) {
+istream& operator>>(istream& in, Matmix& m) 
+{
     for (int i = 0; i < m.rows; ++i)
         for (int j = 0; j < m.cols; ++j)
             in >> m.data[i][j];
@@ -42,7 +48,8 @@ istream& operator>>(istream& in, Matmix& m) {
 }
 
 // Output operator <<
-ostream& operator<<(ostream& out, const Matmix& m) {
+ostream& operator<<(ostream& out, const Matmix& m)
+{
     for (int i = 0; i < m.rows; ++i) {
         for (int j = 0; j < m.cols; ++j)
             out << setw(10) << m.data[i][j] << " ";
@@ -51,10 +58,8 @@ ostream& operator<<(ostream& out, const Matmix& m) {
     return out;
 }
 
-
-
-void Matmix::readFromFile(const std::string& filename) {
-    filename="49l.txt";
+void Matmix::readFromFile(const std::string& filename)
+{
     std::ifstream file(filename);
     if (!file.is_open())
         throw std::runtime_error("Could not open file: " + filename);
@@ -100,7 +105,8 @@ void Matrix::readFromFile(const string& filename) {
 */
 
 // Write to file
-void Matmix::writeToFile(const string& filename) const {
+void Matmix::writeToFile(const string& filename) const 
+{
     ofstream file(filename);
     file << rows << " " << cols << endl;
     for (int i = 0; i < rows; ++i) {
@@ -112,7 +118,8 @@ void Matmix::writeToFile(const string& filename) const {
 }
 
 // Addition
-Matmix Matmix::operator+(const Matmix& other) {
+Matmix Matmix::operator+(const Matmix& other) 
+{
     if (rows != other.rows || cols != other.cols)
         throw runtime_error("Matrix size mismatch!");
 
@@ -125,7 +132,8 @@ Matmix Matmix::operator+(const Matmix& other) {
 }
 
 // Subtraction
-Matmix Matmix::operator-(const Matmix& other) {
+Matmix Matmix::operator-(const Matmix& other) 
+{
     if (rows != other.rows || cols != other.cols)
         throw runtime_error("Matrix size mismatch!");
 
@@ -159,7 +167,8 @@ double Matmix::getValue(int r, int c) const { return data[r][c]; }
 void Matmix::setValue(int r, int c, double val) { data[r][c] = val; }
 
 // Check Symmetry
-bool Matmix::isSymmetric() const {
+bool Matmix::isSymmetric() const 
+{
     if (rows != cols) return false;
     for (int i = 0; i < rows; ++i)
         for (int j = 0; j < cols; ++j)
@@ -169,7 +178,8 @@ bool Matmix::isSymmetric() const {
 }
 
 // Check Diagonal Dominance
-bool Matmix::isDiagonallyDominant() const {
+bool Matmix::isDiagonallyDominant() const 
+{
     for (int i = 0; i < rows; ++i) 
     {
         double diag = fabs(data[i][i]);
@@ -184,33 +194,39 @@ bool Matmix::isDiagonallyDominant() const {
 }
 
 // Make Diagonally Dominant 
-void Matmix::makeDiagonallyDominant() {
-    for (int i = 0; i < rows; ++i) {
+void Matmix::makeDiagonallyDominant() 
+{
+    for (int i = 0; i < rows; ++i) 
+    {
         int maxRow = i;
-        for (int j = i + 1; j < rows; ++j) {
-            if (abs(data[j][i]) > abs(data[maxRow][i]))
+        for (int j = i + 1; j < rows; ++j) 
+        {
+            if (fabs(data[j][i]) > fabs(data[maxRow][i]))
                 maxRow = j;
         }
-        if (maxRow != i) {
+        if (maxRow != i) 
+        {
             swap(data[i], data[maxRow]);
         }
     }
 }
 // Gaussian Elimination
-Matmix Matmix::gaussianElimination() {
-    Matrix A(*this); // Copy current matrix
+Matmix Matmix::gaussianElimination() 
+{
+    Matmix A(*this); // Copy current matrix
 
     for (int i = 0; i < rows; ++i) {
         // Pivoting
         int maxRow = i;
         for (int k = i + 1; k < rows; ++k)
-            if (abs(A.data[k][i]) > abs(A.data[maxRow][i]))
+            if (fabs(A.data[k][i]) > fabs(A.data[maxRow][i]))
                 maxRow = k;
 
         swap(A.data[i], A.data[maxRow]);
 
         // Make all rows below this one 0 in current column
-        for (int k = i + 1; k < rows; ++k) {
+        for (int k = i + 1; k < rows; ++k) 
+        {
             double f = A.data[k][i] / A.data[i][i];
             for (int j = i; j < cols; ++j)
                 A.data[k][j] -= A.data[i][j] * f;
@@ -218,8 +234,9 @@ Matmix Matmix::gaussianElimination() {
     }
 
     // Back substitution
-    Matrix x(rows, 1);
-    for (int i = rows - 1; i >= 0; --i) {
+    Matmix x(rows, 1);
+    for (int i = rows - 1; i >= 0; --i)
+    {
         x.data[i][0] = A.data[i][cols - 1];
         for (int j = i + 1; j < cols - 1; ++j)
             x.data[i][0] -= A.data[i][j] * x.data[j][0];
@@ -228,15 +245,17 @@ Matmix Matmix::gaussianElimination() {
 
     return x;
 }
-Matrix Matrix::LUDecomposition() {
+Matmix Matmix::LUDecomposition() 
+{
     if (rows != cols)
         throw runtime_error("LU Decomposition requires square matrix.");
+    Matmix L(rows, cols), U(rows, cols);
 
-    Matrix L(rows, cols), U(rows, cols);
-
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++) 
+    {
         // Upper Triangular
-        for (int k = i; k < cols; k++) {
+        for (int k = i; k < cols; k++) 
+        {
             double sum = 0;
             for (int j = 0; j < i; j++)
                 sum += (L.data[i][j] * U.data[j][k]);
@@ -244,10 +263,12 @@ Matrix Matrix::LUDecomposition() {
         }
 
         // Lower Triangular
-        for (int k = i; k < rows; k++) {
+        for (int k = i; k < rows; k++) 
+        {
             if (i == k)
                 L.data[i][i] = 1; // Diagonal as 1
-            else {
+            else 
+            {
                 double sum = 0;
                 for (int j = 0; j < i; j++)
                     sum += (L.data[k][j] * U.data[j][i]);
@@ -257,22 +278,26 @@ Matrix Matrix::LUDecomposition() {
     }
 
     // Return both L and U concatenated side by side for now (user can split)
-    Matrix LU(rows, cols * 2);
+    Matmix LU(rows, cols * 2);
     for (int i = 0; i < rows; i++)
-        for (int j = 0; j < cols; j++) {
+        for (int j = 0; j < cols; j++)
+        {
             LU.data[i][j] = L.data[i][j];
             LU.data[i][j + cols] = U.data[i][j];
         }
 
     return LU;
 }
-Matrix Matrix::gaussJacobi(int maxIter, double tol) {
-    Matrix x(rows, 1); // Initial guess = 0
+Matmix Matmix::gaussJacobi(int maxIter, double tol)
+{
+    Matmix x(rows, 1); // Initial guess = 0
 
-    for (int it = 0; it < maxIter; ++it) {
-        Matrix x_new(x);
+    for (int it = 0; it < maxIter; ++it) 
+    {
+        Matmix x_new(x);
 
-        for (int i = 0; i < rows; ++i) {
+        for (int i = 0; i < rows; ++i) 
+        {
             double sigma = 0;
             for (int j = 0; j < cols - 1; ++j)
                 if (j != i)
@@ -292,13 +317,16 @@ Matrix Matrix::gaussJacobi(int maxIter, double tol) {
 
     return x;
 }
-Matrix Matrix::gaussSeidel(int maxIter, double tol) {
-    Matrix x(rows, 1); // Initial guess = 0
+Matmix Matmix::gaussSeidel(int maxIter, double tol)
+{
+    Matmix x(rows, 1); // Initial guess = 0
 
-    for (int it = 0; it < maxIter; ++it) {
-        Matrix x_old(x);
+    for (int it = 0; it < maxIter; ++it) 
+    {
+        Matmix x_old(x);
 
-        for (int i = 0; i < rows; ++i) {
+        for (int i = 0; i < rows; ++i)
+        {
             double sigma = 0;
             for (int j = 0; j < cols - 1; ++j)
                 if (j != i)
@@ -317,19 +345,25 @@ Matrix Matrix::gaussSeidel(int maxIter, double tol) {
 
     return x;
 }
-Matrix Matrix::choleskyDecomposition() {
+Matmix Matmix::choleskyDecomposition()
+{
     if (!isSymmetric()) throw runtime_error("Cholesky: Matrix not symmetric");
 
-    Matrix L(rows, cols);
+    Matmix L(rows, cols);
 
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j <= i; ++j) {
+    for (int i = 0; i < rows; ++i) 
+    {
+        for (int j = 0; j <= i; ++j) 
+        {
             double sum = 0;
-            if (j == i) {
+            if (j == i) 
+            {
                 for (int k = 0; k < j; ++k)
                     sum += pow(L.data[j][k], 2);
                 L.data[j][j] = sqrt(data[j][j] - sum);
-            } else {
+            }
+            else 
+            {
                 for (int k = 0; k < j; ++k)
                     sum += (L.data[i][k] * L.data[j][k]);
                 L.data[i][j] = (data[i][j] - sum) / L.data[j][j];
@@ -340,13 +374,15 @@ Matrix Matrix::choleskyDecomposition() {
     return L;
 }
 
-bool areAllFilesEqual(const std::vector<std::string>& files) {
-    for (size_t i = 1; i < files.size(); ++i) {
-        if (!areFilesEqual(files[0], files[i]))
+bool areAllFilesEqual(const std::vector<string>& files) 
+{
+   /* for (size_t i = 1; i < files.size(); ++i) 
+    {
+        if (!areAllFilesEqual(files[0], files[i]))
             return false;
     }
+    */
+    //Here the function to check two or more files to be identical or not. {custom function designed by you}
     return true;
 }
-std::vector<std::string> files = {
-    "gaussianResult.txt", "GausJacobiRslt", "GaussiedelRslt.txt"
-};
+std::vector<string> files = {"gaussianResult.txt", "GausJacobiRslt.txt", "GaussiedelRslt.txt"} ;
