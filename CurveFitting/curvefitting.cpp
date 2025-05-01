@@ -4,3 +4,6 @@
 //constructor here 
 //Methods here
 
+//constructor- methods etc
+//?how to use destructor properly?
+
