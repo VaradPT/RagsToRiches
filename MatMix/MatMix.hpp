@@ -12,7 +12,7 @@ public:
     int rows, cols;
     double** data; // Dynamic 2D array
     string filename;
-// Constructors & Destructor
+    // Constructors & Destructor
     Matmix();                           // Default constructor
     Matmix(int r, int c);               // Null constructor
     Matmix(const Matmix& other);        // Copy constructor
