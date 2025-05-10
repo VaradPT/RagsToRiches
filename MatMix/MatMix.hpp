@@ -10,7 +10,7 @@ class Matmix
 {
 public:
     int rows, cols;
-    double** data; // Dynamic 2D array
+    double** data;                      // Dynamic 2D array
     string filename;
     // Constructors & Destructor
     Matmix();                           // Default constructor
@@ -19,8 +19,8 @@ public:
     ~Matmix();                          // Destructor
 
     // Input/Output
-    friend istream& operator>>(istream& in, Matmix& m);  // Input from stream
-    friend ostream& operator<<(ostream& out, const Matmix& m); // Output to stream
+    friend istream& operator>>(istream& in, Matmix& m);               // Input from stream
+    friend ostream& operator<<(ostream& out, const Matmix& m);        // Output to stream
     void readFromFile(const string& filename);
     void writeToFile(const string& filename) const;
 
@@ -43,7 +43,7 @@ public:
     bool isSymmetric() const;
 
 
-    // Utility
+    //Utility
     //Utility operations: Trace(Sum of Diagonals)
     //Eigen Values and further operations
 
