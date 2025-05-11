@@ -42,7 +42,6 @@ public:
     void makeDiagonallyDominant();
     bool isSymmetric() const;
 
-
     //Utility:
     //Utility operations: Trace(Sum of Diagonals)
     //Eigen Values and further operations
