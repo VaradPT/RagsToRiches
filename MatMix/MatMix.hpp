@@ -43,7 +43,7 @@ public:
     bool isSymmetric() const;
 
 
-    //Utility
+    //Utility:
     //Utility operations: Trace(Sum of Diagonals)
     //Eigen Values and further operations
 
