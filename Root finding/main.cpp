@@ -6,5 +6,5 @@ int main()
 {
   //Accept the Polynomial ..
   // Display the polynomial
-  //Give the resutlts
+  //Give the results
 }
