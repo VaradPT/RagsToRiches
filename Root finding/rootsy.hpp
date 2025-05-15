@@ -1,4 +1,5 @@
-#ifndef rootsy 
+#ifndef Rootsy 
+#define Rootsy
 #include <iostream>
 using namespace std;
 
