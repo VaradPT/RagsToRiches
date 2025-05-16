@@ -15,7 +15,6 @@ double accept(double x)
     //A. method 1. Accept coefficients in one array, powers in another, corelate, calculate .. for any polynomial
     //B. method 2. Accept coefficients .. usual way..  coefficients, powers
 }
-
 void bisection(double a, double b, double tol = 1e-6) {
     if (f(a) * f(b) >= 0) {
         cout << "No root in the interval." << endl;
