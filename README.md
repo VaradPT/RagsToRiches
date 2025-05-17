@@ -1,4 +1,4 @@
-# RagsToRiches journey
+# RagsToRiches journey..
 ## Wise quote from my highly respected project guide and professor: 
 ## Every Expert was once a beginner..
 Any code, Description, training time exercises etc during my coding journey...
