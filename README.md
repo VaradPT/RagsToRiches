@@ -22,4 +22,4 @@ This should serve like my own journey log.. Starting 18/03/2025 in poor academic
   > Using 18/04/2025 as a recovery day
 * Recovery 2.0
   > 27/04/2025: Nix the jinx. 7 Leetcode probs daily. One NC class daily. Two Stats Concepts Daily. CSS-HTML-ReactNative for fun. Done? Haskell and Cpp probs. Bored? OS Concepts. Not satisfied? 5 push-ups and visit your projects, or visit your past subjects
-* Recovery 2.0 Not quite as robust, but take the chance and rebuild ( 8 May 25 onwards  )
+* Recovery 2.0 Not quite as robust, but take the chance and rebuild ( 8 May 25 onwards  )   
