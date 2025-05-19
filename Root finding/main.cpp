@@ -1,9 +1,13 @@
-#include <iostream>
+//main
 #include "rootsy.hpp"
-using std namespace;
+#include <iostream>
+
 int main()
 {
-  //Accept the Polynomial ..
-  // Display the polynomial
-  //Give the results
+    double x = 1;
+    Rootsy r;
+    r.funct();
+    r.fixedPoint();
+    std::cout<<""<<endl;
+    return 0;
 }
