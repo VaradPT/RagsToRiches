@@ -1,4 +1,4 @@
-//Least Square(Line, Parabola,Exponential, Powerfit), Extrapolation, Lagranges, Spline, Tschebyshev, Fourier
+//Least Square(Line, Parabola,Exponential, Powerfit), Extrapolation, Lagranges, Spline, Tschebyshev, Fourier Series
 #ifndef Curvefitting
 #define Curvefitting
 class Curvefittin
