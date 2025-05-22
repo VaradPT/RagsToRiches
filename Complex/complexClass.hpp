@@ -1,4 +1,4 @@
-#ifndef complexClass
+#ifndef ComplexClass
 #define complexClass
 class complexClass
 {
