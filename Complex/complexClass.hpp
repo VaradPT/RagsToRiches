@@ -1,6 +1,6 @@
 #ifndef ComplexClass
-#define complexClass
-class complexClass
+#define ComplexClass
+class ComplexClass
 {
     
     public:
