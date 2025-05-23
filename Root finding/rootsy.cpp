@@ -57,7 +57,6 @@ void newtonRaphson(double x0, double tol = 1e-6, int maxIter = 100) {
     cout << "Did not converge." << endl;
 }
 */
-
 //Fixed Point 
 double g(double x) {
     return cbrt(x + 2);
