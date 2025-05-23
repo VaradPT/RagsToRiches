@@ -1,7 +1,6 @@
 #ifndef Rootsy 
 #define Rootsy
 #include <iostream>
-using namespace std;
 
 //Newton Raphson Method
 void NewtonRaphson();
