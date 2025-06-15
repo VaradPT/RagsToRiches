@@ -1,4 +1,3 @@
-
 // MatMix.hpp
 #ifndef MATMIX_HPP
 #define MATMIX_HPP
