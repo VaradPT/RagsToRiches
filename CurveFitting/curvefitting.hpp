@@ -5,7 +5,7 @@ class Curvefitting
 {
 public:
   void leastSq();
-//work in progress
+//working
   void curvefit();
 //various 
   void lagranges();
