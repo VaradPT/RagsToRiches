@@ -9,7 +9,6 @@
 
 // Default Constructor
 Matmix::Matmix() : rows(0), cols(0), data(nullptr) {}
-
 // Null Constructor (rows × cols, initialized to 0)
 Matmix::Matmix(int r, int c) : rows(r), cols(c) 
 {
@@ -17,7 +16,6 @@ Matmix::Matmix(int r, int c) : rows(r), cols(c)
     for (int i = 0; i < rows; ++i)
         data[i] = new double[cols]();
 }
-
 // Copy Constructor
 Matmix::Matmix(const Matmix& other) : rows(other.rows), cols(other.cols) 
 {
