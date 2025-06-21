@@ -79,10 +79,6 @@ void Matmix::readFromFile(const std::string& filename)
     file.close();
 }
 
-
-
-
-
 // Read from file
 /*
 void Matrix::readFromFile(const string& filename) {
