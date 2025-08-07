@@ -1,3 +1,5 @@
+/*Options: Complex Standard Library or Creating data structure*/
+
 #ifndef ComplexClass
 #define ComplexClass
 class ComplexClass
@@ -15,3 +17,4 @@ Same standards: Insertion, extractions, file handling etc .. Norm and complex co
     void operations();
 }
 #endif
+
