@@ -3,8 +3,7 @@
 #ifndef ComplexClass
 #define ComplexClass
 class ComplexClass
-{
-    
+{ 
     public:
     int a,b;
 /*
@@ -17,4 +16,5 @@ Same standards: Insertion, extractions, file handling etc .. Norm and complex co
     void operations();
 }
 #endif
+
 
