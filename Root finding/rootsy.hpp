@@ -1,4 +1,4 @@
-//
+//Root finding header file
 #ifndef Rootsy 
 #define Rootsy
 #include <iostream>
@@ -16,4 +16,5 @@ void leastSquare();
 void lagrangesPoly();
 
 #endif 
+
 
