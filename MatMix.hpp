@@ -94,7 +94,6 @@ public:
     MatMix operator-(const MatMix& other) const;
     MatMix operator*(const MatMix& other) const;
 
-
     MatMix gaussianElimination() const;
     MatMix luDecomposition() const;
     MatMix gaussSeidel(const vector<double>& b, int iterations, double tol) const;
@@ -110,3 +109,4 @@ public:
 };
 
 #endif
+
